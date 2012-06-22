@@ -1,0 +1,12 @@
+//THE PATH TO THE ROOT OF OUR OF PATH RELATIVE TO THIS PROJECT.
+//THIS NEEDS TO BE DEFINED BEFORE CoreOF.xcconfig IS INCLUDED
+OF_PATH = ../../..
+
+//THIS HAS ALL THE HEADER AND LIBS FOR OF CORE
+#include "../../../libs/openFrameworksCompiled/project/osx/CoreOF.xcconfig"
+
+OTHER_LDFLAGS = $(OF_CORE_LIBS) $(OPENCV_LIBS)
+HEADER_SEARCH_PATHS = $(OF_CORE_HEADERS) $(SKT_EXTRA_INCLUDES)
+
+SKT_EXTRA_INCLUDES = "$(OF_PATH)/addons/oscpack" "/usr/local/include" "/usr/local/include" "/usr/local/include/opencv" "/usr/local/include/opencv2" 
+OPENCV_LIBS="/usr/local/lib/libopencv_video.2.3.1.dylib" "/usr/local/lib/libopencv_objdetect.2.3.1.dylib" "/usr/local/lib/libopencv_ml.2.3.1.dylib" "/usr/local/lib/libopencv_legacy.2.3.1.dylib" "/usr/local/lib/libopencv_gpu.2.3.1.dylib" "/usr/local/lib/libopencv_contrib.2.3.1.dylib" "/usr/local/lib/libopencv_imgproc.2.3.1.dylib" "/usr/local/lib/libopencv_highgui.2.3.1.dylib" "/usr/local/lib/libopencv_flann.2.3.1.dylib" "/usr/local/lib/libopencv_features2d.2.3.1.dylib" "/usr/local/lib/libopencv_core.2.3.1.dylib" "/usr/local/lib/libopencv_calib3d.2.3.1.dylib"
